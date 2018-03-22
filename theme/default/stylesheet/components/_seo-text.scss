@@ -1,0 +1,33 @@
+//seo-text
+.seo-text {
+    position: relative;
+    padding: 23px 0 95px 0;
+    font-size: 18px;
+    line-height: 1.35em;
+    @extend %clear;
+    
+    &-holder {
+        column-count: 2;
+    }
+    
+    mark {
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .seo-text {
+        padding: 14px 0 33px 0;
+        font-size: 15px;
+        line-height: 18px;
+        
+        p {
+            padding: 0 0 25px 0;
+        }
+        
+        &-holder {
+            column-count: 1;
+        }
+    }
+}
+// end of seo-text

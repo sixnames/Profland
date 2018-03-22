@@ -1,0 +1,136 @@
+//category
+.category {
+    position: relative;
+    margin: 80px 0 10px 0;
+    @extend %clear;
+    
+    &-list {
+        @extend %clear;
+    }
+    
+    
+    &-item {
+        position: relative;
+        float: left;
+        width: 33.333%;
+        padding: 0 15px;
+        margin: 0 0 30px 0;
+        
+        font-size: 14px;
+        font-weight: 800;
+        
+        &:nth-child(3n + 1) {
+            clear: both;
+        }
+        
+        &-holder {
+            position: relative;
+            background: $grayLight;
+            
+            &:hover .name {
+                color: $green;
+            }
+            
+            & > a {
+                @extend %fullLink;
+            }
+        }
+        
+        &-content {
+            padding: 26px 28px 39px 28px;
+        }
+        
+        .image {
+            position: relative;
+            z-index: 1;
+            
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .name {
+            margin: 0 0 18px 0;
+            font-size: 18px;
+            line-height: 1.25em;
+            transition: all 0.2s;
+        }
+        
+        ul {
+            position: relative;
+            z-index: 6;
+            
+            li {
+                position: relative;
+                padding: 0 0 0 30px;
+                margin: 7px 0 0 0;
+                
+                &:first-child {
+                    margin: 0;
+                }
+                
+                a {
+                    @extend %noDecoration;
+                }
+                
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 0;
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: $green;
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .category-item {
+        width: 50%;
+        padding: 0 10px;
+        
+        &:nth-child(2n + 1) {
+            clear: both;
+        }
+        
+        &:nth-child(3n + 1) {
+            clear: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .category {
+        margin: 37px 0 10px 0;
+        
+        .green-butn--download {
+            display: none;
+        }
+        
+        &-item {
+            float: none;
+            width: 100%;
+            margin: 0 0 10px 0;
+            
+            &-content {
+                padding: 19px 20px 16px 20px;
+            }
+            
+            .name {
+                margin: 0 0 10px 0;
+                font-size: 17px;
+                
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// end of category

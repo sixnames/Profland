@@ -1,0 +1,47 @@
+//faq
+.faq {
+    position: relative;
+    @extend %clear;
+    
+    &-content {
+        position: relative;
+        margin: 0 0 40px 0;
+        @extend %clear;
+    }
+    
+    &-section {
+        position: relative;
+        max-width: 880px;
+        margin: 0 0 40px 0;
+        @extend %standardText;
+        @extend %clear;
+        
+        p {
+            margin: 0 0 25px 0;
+        }
+    }
+    
+    &-subtitle {
+        margin: 0 0 24px 0;
+        font-weight: 700;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .faq {
+        
+        &-section {
+            margin: 0 0 30px 0;
+            
+            p {
+                margin: 0 0 10px 0;
+            }
+        }
+        
+        &-subtitle {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+// end of faq

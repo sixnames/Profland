@@ -1,0 +1,93 @@
+
+//request
+.request {
+    position: relative;
+    margin: 85px 0 87px 0;
+    @extend %clear;
+    
+    &-text {
+        position: relative;
+        float: left;
+        width: 30%;
+        padding: 31px 0 0 0;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            display: block;
+            width: 96px;
+            height: 3px;
+            background: $grayLight;
+        }
+        
+        p {
+            @extend %standardText;
+            padding: 0 0 15px 0;
+        }
+    }
+    
+    &-form {
+        float: right;
+        width: calc(70% - 50px);
+        padding: 43px 52px 51px 52px;
+        //noinspection CssUnknownTarget
+        background: $violet url('../images/ui/requwst-bg.png') no-repeat 100% 0;
+        background-size: auto 100%;
+        
+        .retina & {
+            //noinspection CssUnknownTarget
+            background: $violet url('../images/ui/requwst-bg@2x.png') no-repeat 100% 0;
+            background-size: auto 100%;
+        }
+        
+        form {
+            max-width: 320px;
+        }
+        
+        .input-line {
+            margin: 0 0 23px 0;
+        }
+        
+        .green-butn {
+            padding: 0 22px;
+            margin: 30px 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .request {
+        margin: 35px 0 44px 0;
+        
+        &-text {
+            float: none;
+            width: auto;
+            padding: 17px 0 3px 0;
+            
+            p {
+                padding: 0 0 14px 0;
+            }
+        }
+        
+        &-form {
+            float: none;
+            width: auto;
+            padding: 18px 20px 32px 20px;
+            
+            form {
+                max-width: 320px;
+            }
+            
+            .input-line {
+                margin: 0 0 7px 0;
+            }
+            
+            .green-butn {
+                margin: 30px 0 0 0;
+            }
+        }
+    }
+}
+// end of request

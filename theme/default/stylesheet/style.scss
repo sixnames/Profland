@@ -1,0 +1,73 @@
+@import "components/variables";
+@import "components/reset";
+@import "components/placeholders";
+@import "components/typical-elements";
+@import "components/buttons";
+@import "components/form-elements";
+@import "components/header";
+@import "components/footer";
+@import "components/hero";
+@import "components/catalogue";
+@import "components/testimonials";
+@import "components/product";
+@import "components/request";
+@import "components/customers";
+@import "components/category";
+@import "components/delivery";
+@import "components/portfolio";
+@import "components/ceo";
+@import "components/seo-text";
+@import "components/article";
+@import "components/blog";
+@import "components/video";
+@import "components/faq";
+@import "components/about";
+@import "components/contacts";
+@import "components/modal";
+@import "components/plugins";
+
+.menu-max-w {
+    max-width: 160px;
+}
+
+.search-icon-mod {
+    font-size: 16px;
+    padding: 3px;
+}
+
+/*.text-under-logo {
+	line-height: 10px;
+}*/
+.about-extansion .inner {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+p mark {
+    font-weight: 700;
+    display: block;
+}
+
+.header-nav > ul > li > a {
+    min-height: 49px;
+}
+
+#request-form {
+    max-width: 320px;
+}
+
+.catalogue-item-content {
+    min-height: 205px;
+}
+
+.logo-without-link {
+    display: block;
+    width: 250px;
+    height: 114px;
+    padding: 26px 30px 0 30px;
+    color: #53555a;
+}
+
+.header-nav > ul > li {
+    min-width: 170px;
+}

@@ -1,0 +1,204 @@
+//________________FORM ELEMENTS___________
+input::-ms-clear {
+    display: none;
+}
+
+::-moz-placeholder {
+    color: $placeHolder;
+}
+
+:-ms-input-placeholder {
+    color: $placeHolder;
+}
+
+::-webkit-input-placeholder {
+    color: $placeHolder;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+.hero-form,
+.request-form {
+    ::-moz-placeholder {
+        color: $white;
+    }
+    
+    :-ms-input-placeholder {
+        color: $white;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: $white;
+    }
+    
+    :focus::-moz-placeholder {
+        color: transparent;
+    }
+    
+    :focus:-ms-input-placeholder {
+        color: transparent;
+    }
+    
+    :focus::-webkit-input-placeholder{
+        color: transparent;
+    }
+}
+
+input.text-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0;
+    margin: 0;
+    font-family: $mainFont;
+    font-size: 18px;
+    font-weight: 400;
+    color: $mainColor;
+    border: none;
+    border-bottom: 1px solid $black;
+    background: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    .hero-form &,
+    .request-form & {
+        color: $white;
+        border-color: $white;
+    }
+    
+    .hero-form &.error,
+    .request-form &.error,
+    &.error {
+        color: $red;
+        border: 1px solid $red;
+    }
+    
+    //noinspection ALL
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $mainColor !important;
+    }
+}
+
+textarea.textarea-field {
+    @extend input.text-input;
+    overflow: hidden;
+    resize: none;
+}
+
+label.error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    color: $red;
+    white-space: nowrap;
+}
+
+.radio {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $black;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50%;
+    
+    &:before {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: 4px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $black;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+    
+    & input {
+        position: absolute;
+        top: 0;
+        left: -999px;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        visibility: hidden;
+    }
+    
+    &.checked:before {
+        opacity: 1;
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $black;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &:before {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: 4px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $black;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+    
+    & input {
+        position: absolute;
+        top: 0;
+        left: -999px;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        visibility: hidden;
+    }
+    
+    &.checked:before {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    input.text-input {
+        font-size: 15px;
+    }
+}
+//_____________end of FORM ELEMENTS_________

@@ -1,0 +1,54 @@
+//fonts
+//noinspection ALL
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+//noinspection ALL
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+//noinspection ALL
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+//noinspection ALL
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Light.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//variables
+$mainFont: 'Proxima Nova', Arial, Helvetica, sans-serif;
+
+$mainColor: #000000;
+$lightColor: #53555a;
+$placeHolder: #828282;
+
+$black: #000000;
+$white: #ffffff;
+$red: #870f21;
+$green: #36d85e;
+$violet: #545267;
+$violetTransparent: #eeedf0;
+$gray: #dcdcdc;
+$grayLight: #edeeee;
+$shadow: 0 3px 7px rgba(0, 0, 0, 0.27);
+$darkBg: #222222;
+$darkBorder: #353535;
+$heroBg: rgba(57, 41, 127, 0.2);
+$portfolioBg: rgba(84, 82, 103, 0.8);

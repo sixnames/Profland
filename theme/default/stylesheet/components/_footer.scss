@@ -1,0 +1,359 @@
+
+//____________FOOTER_______________________
+.footer {
+    position: relative;
+    z-index: 90;
+    width: 100%;
+    min-height: 493px;
+    padding-bottom: 23px;
+    color: $white;
+    background: $darkBg;
+    @extend %clear;
+    
+    a {
+        display: block;
+        
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    
+    .ui-butn {
+        position: absolute;
+        top: -25px;
+        right: 30px;
+    }
+    
+    &-section {
+        border-top: 1px solid $darkBorder;
+        @extend %clear;
+        
+        &:first-child {
+            border: none;
+        }
+    }
+    
+    &-left {
+        float: left;
+        width: 23%;
+        @extend %clear;
+    }
+    
+    &-right {
+        float: right;
+        width: 77%;
+        padding: 0 0 0 30px;
+        @extend %clear;
+    }
+    
+    &-nav,
+    &-additional-nav {
+        margin: 38px 0 42px 0;
+        
+        font-size: 14px;
+        font-weight: 700;
+        border-right: 1px solid $darkBorder;
+        
+        li {
+            margin: 10px 0 0 0;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    &-nav {
+        margin: 38px 0 27px 0;
+        border: none;
+        @extend %clear;
+        
+        &-title {
+            margin: 0 0 18px 0;
+        }
+        
+        ul {
+            float: left;
+            width: 33.333%;
+            padding: 0 10px 0 0;
+            margin: 0 0 15px 0;
+            
+            li {
+                position: relative;
+                font-size: 12px;
+                padding: 0 0 0 30px;
+                
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 0;
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: #36d85e;
+                    margin-top: -2px;
+                }
+                
+                &:first-child {
+                    font-size: 14px;
+                    padding: 0;
+                    
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    &-phone {
+        margin: 20px 0 11px 0;
+        float: left;
+        font-size: 15px;
+        
+        a {
+            margin: 7px 0 0 0;
+            
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+    
+    .green-butn {
+        float: right;
+        padding: 0 37px;
+        margin: 20px 0 23px 0;
+    }
+    
+    &-copyright {
+        margin: 47px 0 0 0;
+        font-size: 15px;
+    }
+    
+    &-info {
+        float: left;
+        margin: 47px 0 0 0;
+        font-size: 15px;
+        
+        span {
+            display: block;
+            margin: 8px 0 0 0;
+        }
+    }
+    
+    &-social {
+        float: right;
+        margin: 54px 0 0 0;
+        @extend %clear;
+        
+        a {
+            position: relative;
+            float: left;
+            width: 64px;
+            height: 64px;
+            border: 2px solid $lightColor;
+            margin: 0 0 0 18px;
+            border-radius: 50%;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            [class*="icon-"] {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 22px;
+                height: 22px;
+                margin: -11px 0 0 -11px;
+                fill: $white;
+            }
+            
+            &:hover [class*="icon-"] {
+                fill: $green;
+            }
+        }
+    }
+}
+
+//____________end of FOOTER___________________
+
+
+//___________RESPONSIVE__________________________
+
+//1180
+@media only screen and (max-width: 1180px) {
+    
+    .footer {
+    
+        .ui-butn {
+            top: -20px;
+        }
+        
+        &-left {
+            width: 18%;
+        }
+        
+        &-right {
+            width: 82%;
+            padding: 0 0 0 15px;
+        }
+        
+        &-phone {
+            font-size: 12px;
+            
+            a {
+                font-size: 18px;
+            }
+        }
+        
+        .green-butn {
+            padding: 0 20px;
+            margin: 20px 0 23px 0;
+        }
+        
+        &-copyright {
+            font-size: 14px;
+        }
+        
+        &-info {
+            margin: 47px 0 0 0;
+            font-size: 14px;
+        }
+        
+        &-social {
+            margin: 54px 0 0 0;
+            
+            a {
+                width: 52px;
+                height: 52px;
+                margin: 0 0 0 15px;
+                
+                [class*="icon-"] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 22px;
+                    height: 22px;
+                    margin: -11px 0 0 -11px;
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+//end of 1180
+
+//1024
+@media only screen and (max-width: 1024px) {
+    .footer {
+        .ui-butn {
+            top: -16px;
+            right: 10px;
+        }
+        
+        &-left,
+        &-right {
+            float: none;
+            width: 100%;
+            padding: 0 20px;
+        }
+    
+        &-nav,
+        &-additional-nav {
+            border: none;
+            padding: 27px 0 10px 0;
+            margin: 0;
+        }
+    
+        &-nav {
+            padding: 0 0 15px 0;
+            
+            &-title {
+                margin: 0 0 20px 0;
+            }
+    
+            ul {
+                float: none;
+                width: 100%;
+                padding: 0 0 9px 20px;
+        
+                li {
+                    position: relative;
+                    font-size: 12px;
+                    padding: 0 0 0 30px;
+            
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 0;
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        background: #36d85e;
+                        margin-top: -2px;
+                    }
+            
+                    &:first-child {
+                        font-size: 14px;
+                        padding: 0;
+                
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &-phone {
+            float: none;
+            margin: 0;
+            padding: 5px 0 0 0;
+            
+            .footer-left & {
+                padding: 12px 0 0 0;
+            }
+        }
+        
+        .green-butn {
+            float: none;
+            margin: 10px 0 20px 0;
+        }
+        
+        &-copyright {
+            margin: 20px 0 20px 0;
+        }
+        
+        &-info {
+            float: none;
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        &-social {
+            float: none;
+            margin: 20px 0 0 0;
+            text-align: center;
+            
+            a {
+                float: none;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+}
+//end of 1024
+
+//768
+@media only screen and (max-width: 768px) {
+
+}
+
+//end of 768
+//___________end of RESPONSIVE___________________

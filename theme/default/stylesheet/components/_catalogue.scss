@@ -1,0 +1,243 @@
+//catalogue
+.catalogue {
+    position: relative;
+    margin: 0 0 40px 0;
+    @extend %clear;
+    
+    &-text {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        line-height: 24px;
+        
+        p {
+            max-width: 900px;
+            padding: 0 0 24px 0;
+        }
+    }
+    
+    &-nav {
+        position: relative;
+        margin: 0 0 30px 0;
+        @extend %clear;
+        
+        &-item {
+            float: left;
+            width: 25%;
+            padding: 0 15px;
+            margin: 0 0 30px 0;
+            
+            &:nth-child( 4n + 1) {
+                clear: both;
+            }
+        }
+        
+        &-holder {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: $white;
+            box-shadow: $shadow;
+            
+            &:hover {
+                color: $green;
+            }
+            
+            a {
+                @extend %fullLink;
+                //display: none;
+            }
+            
+            .image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 98px;
+                height: 98px;
+                background: $grayLight;
+                
+                img {
+                    height: auto;
+                }
+            }
+            
+            .name {
+                padding: 0 0 0 20px;
+                
+                font-weight: 800;
+                font-size: 12px;
+                transition: all 0.2s;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    &-list {
+        margin: 0 0 40px 0;
+        @extend %clear;
+    }
+    
+    &-item  {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 0 15px;
+        margin: 0 0 30px 0;
+        @extend %clear;
+        
+        &:nth-child(odd) {
+            clear: both;
+        }
+        
+        &-holder {
+            position: relative;
+            display: flex;
+            align-content: stretch;
+            background: $grayLight;
+    
+            & > a {
+                @extend %fullLink;
+            }
+            
+            &:hover {
+                .name {
+                    color: $green;
+                }
+                
+                .white-butn {
+                    background: $green;
+                    color: $white;
+                }
+            }
+        }
+        
+        &-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 243px;
+            padding: 10px;
+        }
+        
+        &-content {
+            flex: 1 1 327px;
+            padding: 20px 10px 20px 0;
+        }
+        
+        .name {
+            margin: 0 0 5px 0;
+            
+            font-weight: 700;
+            line-height: 1.25em;
+            transition: all 0.2s;
+        }
+        
+        &-features {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            @extend %clear;
+            
+            dt,
+            dd {
+                float: left;
+                margin: 0 0 3px 0;
+            }
+            
+            dt {
+                clear: both;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .catalogue {
+        margin: 0 0 40px 0;
+    
+        &-list {
+            margin: 0 0 30px 0;
+        }
+        
+        &-item {
+            padding: 0 10px;
+            margin: 0 0 10px 0;
+        }
+    
+        &-nav {
+            
+            &-item {
+                width: 50%;
+                padding: 0 10px;
+                margin: 0 0 20px 0;
+                
+                &:nth-child(4n + 1) {
+                    clear: none;
+                }
+    
+                &:nth-child(2n + 1) {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .catalogue {
+        &-text {
+            font-size: 15px;
+            line-height: 18px;
+        }
+        
+        &-nav {
+            &-item {
+                float: none;
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+        }
+        
+        &-item {
+            float: none;
+            width: 100%;
+        
+            &-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 100px;
+            }
+        
+            &-content {
+                flex: 1 1 200px;
+                padding: 23px 10px 20px 0;
+            }
+        
+            .name {
+                margin: 0 0 5px 0;
+                font-size: 13px;
+            
+                br {
+                    display: none;
+                }
+            }
+        
+            &-features {
+                margin: 0 0 10px 0;
+                font-size: 13px;
+            
+                dt,
+                dd {
+                    margin: 0 0 3px 0;
+                }
+            }
+        }
+    }
+}
+// end of catalogue

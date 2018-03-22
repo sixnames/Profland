@@ -1,0 +1,184 @@
+//testimonials
+.testimonials {
+    position: relative;
+    
+    .section-title {
+        z-index: 2;
+        color: $white;
+    }
+    
+    &-holder {
+        position: relative;
+        padding: 49px 60px 105px 60px;
+        
+        &:after,
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 50%;
+            height: 100%;
+            background: $violet;
+        }
+    
+        &:after {
+            left: auto;
+            right: 0;
+            background: $grayLight;
+        }
+    }
+    
+    &-item {
+        position: relative;
+        z-index: 2;
+        margin: 0 0 46px 0;
+        @extend %clear;
+        
+        &:last-child {
+            margin: 0;
+        }
+        
+        &-author {
+            position: relative;
+            float: left;
+            width: 50%;
+            padding: 33px 35px 0 0;
+            font-size: 24px;
+            line-height: 1em;
+            font-weight: 700;
+            color: $white;
+            mark {
+                display: block;
+            }
+            
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                display: block;
+                width: 96px;
+                height: 3px;
+                background: $green;
+            }
+        }
+        
+        &-content {
+            float: right;
+            width: 50%;
+            padding: 0 0 0 35px;
+            font-size: 18px;
+            line-height: 1.5em;
+            
+            p {
+                position: relative;
+                padding: 54px 0 20px 0;
+                
+                &:after,
+                &:before {
+                    position: absolute;
+                    content: '"';
+                    top: 14px;
+                    left: -24px;
+                    display: block;
+                    margin: 0 0 0 0;
+                    
+                    font-size: 60px;
+                    line-height: 1em;
+                    font-weight: 700;
+                    color: $green;
+                }
+    
+                &:after {
+                    top: calc(100% - 20px);
+                    left: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .testimonials {
+        
+        .section-title {
+            padding: 15px 20px 0 20px;
+            margin: 0;
+            background: $violet;
+        }
+        
+        &-holder {
+            padding: 0;
+            
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+        
+        &-item {
+            margin: 0;
+            
+            &-author {
+                float: none;
+                width: 100%;
+                padding: 40px 20px 20px 20px;
+                font-size: 24px;
+                line-height: 28px;
+                background: $violet;
+                
+                &:before {
+                    top: 20px;
+                    left: 20px;
+                }
+            }
+            
+            &-content {
+                float: none;
+                width: 100%;
+                padding: 20px 20px 20px 20px;
+                font-size: 18px;
+                line-height: 1.5em;
+                background: $grayLight;
+                
+                p {
+                    position: relative;
+                    padding: 9px 0 20px 0;
+                    
+                    &:after,
+                    &:before {
+                        top: -6px;
+                        left: -10px;
+                        font-size: 24px;
+                    }
+                    
+                    &:after {
+                        top: calc(100% - 20px);
+                        left: calc(100% - 20px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonials {
+        &-item {
+            &-author {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            
+            &-content {
+                padding: 20px 20px 20px 20px;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+// end of testimonials

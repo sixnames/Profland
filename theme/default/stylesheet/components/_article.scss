@@ -1,0 +1,47 @@
+//article
+.article {
+    position: relative;
+    @extend %clear;
+    
+    &-content {
+        position: relative;
+        margin: 0 0 40px 0;
+        @extend %clear;
+    }
+    
+    &-column {
+        float: left;
+        width: calc(50% - 15px);
+        margin: 20px 0 0 0;
+        @extend %standardText;
+        
+        &:first-child {
+            float: right;
+            margin: 20px 0 0 0;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        p {
+            padding: 0 0 24px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .article {
+        &-column:first-child,
+        &-column {
+            float: none;
+            width: 100%;
+            
+            p {
+                padding: 0 0 15px 0;
+            }
+        }
+    }
+}
+// end of article

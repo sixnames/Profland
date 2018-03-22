@@ -1,0 +1,121 @@
+//ceo
+.ceo {
+    position: relative;
+    margin: 52px 0 60px 0;
+    @extend %clear;
+    
+    .section-title {
+        padding: 0 0 49px 0;
+        margin: 0 0 65px 0;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 96px;
+            height: 3px;
+            background: $green;
+        }
+    }
+    
+    &-holder {
+        position: relative;
+        @extend %clear;
+    }
+    
+    &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: auto;
+            max-width: 10000%;
+            height: 100%;
+        }
+    }
+    
+    &-content {
+        position: relative;
+        z-index: 2;
+        float: right;
+        min-height: 626px;
+        width: calc(50% - 15px);
+        padding: 210px 10px 61px 0;
+        
+        &-top {
+            color: $white;
+        }
+        
+        &-bottom {
+            max-width: 490px;
+            font-size: 18px;
+            line-height: 1.33em;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .ceo {
+        margin: 40px 0 40px 0;
+        
+        .section-title {
+            padding: 0 0 20px 0;
+            margin: 0;
+        }
+        
+        &-image {
+            display: none;
+        }
+        
+        &-content {
+            float: none;
+            min-height: 0;
+            width: 100%;
+            padding: 0;
+            
+            &-top {
+                padding: 20px 20px 20px 20px;
+                background: $violet;
+            }
+            
+            &-bottom {
+                background: $grayLight;
+                max-width: 100%;
+                padding: 20px 20px 20px 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ceo {
+        .section-title {
+            padding: 0 0 17px 0;
+            font-size: 18px;
+        }
+        
+        &-content {
+            
+            &-top {
+                padding: 18px 20px 20px 20px;
+            }
+            
+            &-bottom {
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+// end of ceo

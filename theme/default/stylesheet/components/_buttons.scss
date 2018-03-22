@@ -1,0 +1,251 @@
+//buttons
+[class*="-butn"] {
+    position: relative;
+    display: block;
+    @include buttonHeight(50px);
+    padding: 0 20px;
+    margin: 0;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a[class*="-butn"]:hover {
+    text-decoration: none;
+}
+
+.green-butn {
+    background: $green;
+    border: 1px solid $green;
+    color: $mainColor;
+    
+    [class*="icon-"] {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        margin: 0 10px 0 0;
+        fill: $black;
+    }
+    
+    &:hover {
+        background: $white;
+        color: $green;
+        
+        [class*="icon-"] {
+            fill: $green;
+        }
+    }
+    
+    &--download {
+        padding: 0 30px;
+        margin: 0 0 40px 0;
+        clear: both;
+    }
+}
+
+.white-butn {
+    background: $white;
+    color: $green;
+    
+    &:hover {
+        background: $green;
+        color: $white;
+    }
+    
+    &--download {
+        padding: 0 30px;
+        margin: 0 0 40px 0;
+        clear: both;
+    }
+}
+
+.ui-butn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    transition: all 0.2s;
+    
+    [class*="icon-"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+        fill: $black;
+    }
+    
+    .icon-uniF190 {
+        transform: rotate(90deg);
+        fill: $green;
+    }
+    
+    &.current,
+    &:hover {
+        background: $green;
+        color: $white;
+        
+        .icon-uniF190,
+        [class*="icon-"] {
+            fill: $white;
+        }
+    }
+}
+
+.plus-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background: $green;
+    border-radius: 50%;
+    
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 10px;
+        height: 2px;
+        background: $violet;
+        margin: -1px 0 0 -5px;
+    }
+    
+    &:after {
+        width: 2px;
+        height: 10px;
+        margin: -5px 0 0 -1px;
+    }
+}
+
+.all-link {
+    font-size: 18px;
+    margin: 15px 0 0 0;
+    clear: both;
+    
+    a {
+        color: $mainColor;
+        text-decoration: underline;
+        
+        &:hover {
+            text-decoration: none;
+            color: $green;
+        }
+    }
+}
+
+.centered-button {
+    position: relative;
+    z-index: 10;
+    clear: both;
+    text-align: center;
+    
+    &--positioned {
+        top: -25px;
+    }
+    
+    [class*="-butn"] {
+        display: inline-block;
+        padding: 0 20px;
+    }
+}
+
+.call-button {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    z-index: 300;
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border: 1px solid $green;
+    background: $green;
+    border-radius: 50%;
+    color: $white;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        fill: $white;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        background-color: $white;
+
+        svg {
+            fill: $green;
+        }
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    
+    [class*="-butn"] {
+        @include buttonHeight(40px);
+        font-size: 14px;
+    }
+    
+    .ui-butn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .centered-button--positioned {
+        top: -20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    [class*="-butn"] {
+        @include buttonHeight(32px);
+        font-size: 10px;
+    }
+    
+    .ui-butn {
+        width: 32px;
+        height: 32px;
+    
+        [class*="icon-"] {
+            width: 14px;
+            height: 14px;
+            margin: -7px 0 0 -7px;
+        }
+    }
+
+    .call-button {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .all-link {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+    }
+}
+//end of buttons

@@ -1,0 +1,79 @@
+//delivery
+.delivery {
+    position: relative;
+    margin: 10px 0 82px 0;
+    @extend %clear;
+    
+    &-content {
+        //noinspection CssUnknownTarget
+        background: $gray url('../images/ui/delivery-map.png') no-repeat 100% 0;
+        background-size: auto 100%;
+        @extend %clear;
+        
+        .retina & {
+            //noinspection CssUnknownTarget
+            background: $gray url('../images/ui/delivery-map@2x.png') no-repeat 100% 0;
+            background-size: auto 100%;
+        }
+    }
+    
+    &-title {
+        padding: 0 0 14px 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    &-text {
+        max-width: 50%;
+        padding: 52px 0 59px 30px;
+        
+        p {
+            font-size: 18px;
+            line-height: 1.4em;
+        }
+    }
+    
+    &-image {
+        display: none;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .delivery {
+        margin: 20px 0 40px 0;
+        
+        &-content {
+            background: $gray;
+            
+            .retina & {
+                background: $gray;
+            }
+        }
+        
+        &-title {
+            padding: 0 0 14px 0;
+            font-size: 15px;
+        }
+        
+        &-text {
+            max-width: 100%;
+            padding: 30px 20px 18px 20px;
+            
+            p {
+                font-size: 15px;
+                line-height: 1.2em;
+            }
+        }
+        
+        &-image {
+            display: block;
+        }
+    }
+    
+}
+// end of delivery

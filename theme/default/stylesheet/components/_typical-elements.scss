@@ -1,0 +1,265 @@
+
+//___________TYPICAL ELEMENTS___________________
+
+//____________TITLES______________________
+.section-title {
+    position: relative;
+    margin: 0 0 16px 0;
+    font-size: 48px;
+    line-height: 1.2em;
+    letter-spacing: -0.03em;
+    
+    font-weight: 300;
+    
+    h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+        position: relative;
+        top: 0;
+        display: inline-block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 10px;
+        //noinspection CssUnknownTarget
+        background: url('../images/ui/logo-ico.svg') no-repeat 0 0;
+        background-size: 20px 20px;
+        transition: all 0.2s;
+    }
+    
+    &--no-icon {
+        h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+            display: none;
+        }
+    }
+    
+    &--trigger {
+        cursor: pointer;
+        
+        h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+            top: 5px;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            margin: 0 0 0 20px;
+            background: $white;
+            border-radius: 50%;
+            box-shadow: $shadow;
+            transition: all 0.2s;
+            //noinspection CssUnknownTarget
+            background: $white url('../images/ui/triangle.svg') no-repeat 50% 54%;
+            background-size: 14px 14px;
+        }
+        
+        &.active {
+            h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+                transform: rotate(180deg);
+                box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.27);
+            }
+        }
+    }
+    
+    mark {
+        display: block;
+        font-family: $mainFont;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.column-title {
+    padding: 0 0 7px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+//____________end of TITLES_______________
+
+
+.inner {
+    position: relative;
+    max-width: 1230px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    @extend %clear;
+    
+    &--with-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.main {
+    position: relative;
+    z-index: 40;
+    display: block;
+    max-width: 1568px;
+    min-height: calc(100vh - 493px);
+    margin: 0 auto;
+    box-shadow: $shadow;
+    overflow: hidden;
+    
+    @extend %clear;
+    
+    .links-page & {
+        padding-top: 120px;
+    }
+}
+
+.hide {
+    opacity: 0;
+    
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.input-line {
+    position: relative;
+    @extend %clear;
+}
+
+.page-row {
+    display: table;
+    width: 100%;
+}
+
+.page-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+//breadcrumbs
+.breadcrumbs {
+    margin: 0 0 10px 0;
+    
+    ul {
+        @extend %clear;
+        
+        li {
+            float: left;
+            margin: 0 0 7px 4px;
+            
+            font-size: 12px;
+            font-weight: 600;
+            
+            a {
+                @extend %noDecoration;
+            }
+            
+            &:before {
+                display: inline-block;
+                content: '/';
+                margin: 0 4px 0 0;
+            }
+            
+            &:first-child {
+                margin-left: 0;
+                
+                &:before {
+                    display: none;
+                }
+            }
+            
+            &.current a {
+                pointer-events: none;
+            }
+        }
+    }
+}
+// end of breadcrumbs
+
+//site links
+.site-links {
+    padding: 50px 15px;
+    
+    li {
+        font-size: 18px;
+        padding: 0 0 15px 0;
+        
+        a {
+            color: $mainColor;
+            
+            @extend %noDecoration;
+        }
+    }
+}
+
+//end of site links
+
+@media only screen and (max-width: 1180px) {
+    .section-title {
+        &--trigger {
+            h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+                top: 4px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .inner {
+        padding-left: 10px;
+        padding-right: 10px;
+    
+        &--with-list {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    .links-page .main {
+        padding-top: 30px;
+    }
+    
+    .section-title {
+        &--trigger {
+            h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+                top: 1px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-title {
+        margin: 0 0 9px 0;
+        font-size: 22px;
+    
+        h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+            width: 11px;
+            height: 11px;
+            background-size: 11px 11px;
+        }
+    
+        mark {
+            font-size: 16px;
+        }
+    
+        &--trigger {
+            h1:after, h2:after, h3:after, h4:after, h5:after, h6:after , span:after {
+                position: absolute;
+                right: 0;
+                top: -5px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    
+    .breadcrumbs {
+        display: none;
+    }
+    
+    .column-title {
+        padding: 0 0 7px 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+//___________end of TYPICAL ELEMENTS____________
