@@ -23,3 +23,109 @@ for(i in category){html+='<li class="dropdown-header">'+category[i]['name']+'</l
 if(html){this.show();}else{this.hide();}
 $(this).siblings('ul.dropdown-menu').html(html);}
 $(this).after('<ul class="dropdown-menu"></ul>');$(this).siblings('ul.dropdown-menu').delegate('a','click',$.proxy(this.click,this));});}})(window.jQuery);
+
+var url = document.location.href;
+$('#footer_collback_modal #request-form input[name=\"page_url\"]').val(url);
+$('#footer_collback_modal #request-form button').on('click', function() {
+    var button = $(this);
+    yaCounter47825998.reachGoal('footer-obratniy-zvonok'); 
+    $.ajax({
+        url: 'index.php?route=common/modal/send_callback',
+        type: 'post',
+        data: $('#footer_collback_modal #request-form input, #footer_collback_modal #request-form textarea'),
+        dataType: 'json',
+        beforeSend: function(){
+            $(button).text('Отправка...');
+        },
+        success: function(json) {
+            $('#footer_collback_modal #request-form').parent().find('.request-success').remove();
+            $('#footer_collback_modal #request-form').parent().find('.request-error').remove();
+            if (json['success']) {
+                // $('#footer_collback_modal #request-form').before('<div class="request-success" style=\"color: green; line-height: 30px; font-size: 17px; \">' + json['success'] + '</div>');
+                $('.success_modal').click();
+            }
+            if (json['error']) {
+                $('#footer_collback_modal #request-form').before('<div class="request-error" style=\"color: red; line-height: 30px; font-size: 17px; \">' + json['error'] + '</div>');
+            console.log('test3');
+			}
+            $(button).text('Отправить');
+          
+        }
+
+    });
+});
+
+$('#collback_modal #request-form input[name=\"page_url\"]').val(url);
+$('#collback_modal #request-form button').on('click', function() {
+    var button = $(this);
+    yaCounter47825998.reachGoal('header-ostavit-zayavku'); 
+    $.ajax({
+        url: 'index.php?route=common/modal/send_order',
+        type: 'post',
+        data: $('#collback_modal #request-form input, #collback_modal #request-form textarea, #product input'),
+        dataType: 'json',
+        beforeSend: function(){
+            $(button).text('Отправка...');
+        },
+        success: function(json) {
+            $('#collback_modal #request-form').parent().find('.request-success').remove();
+            $('#collback_modal #request-form').parent().find('.request-error').remove();
+            if (json['success']) {
+                // $('#collback_modal #request-form').before('<div class="request-success" style=\"color: green; line-height: 30px; font-size: 17px; \">' + json['success'] + '</div>');
+                $('.success_modal').click();
+            }
+            if (json['error']) {
+                $('#collback_modal #request-form').before('<div class="request-error" style=\"color: red; line-height: 30px; font-size: 17px; \">' + json['error'] + '</div>');
+                console.log('test2');
+            }
+            $(button).text('Отправить');
+        }
+    });
+});
+
+var url = document.location.href;
+$('#collback_modal #request-form input[name=\"page_url\"]').val(url);
+$('#collback_modal #request-form button').on('click', function() {
+    var button = $(this);
+    yaCounter47825998.reachGoal('header-ostavit-zayavku'); 
+    $.ajax({
+        url: 'index.php?route=common/modal/send_request',
+        type: 'post',
+        data: $('#collback_modal #request-form input, #collback_modal #request-form textarea'),
+        dataType: 'json',
+        beforeSend: function(){
+            $(button).text('Отправка...');
+        },
+        success: function(json) {
+            $('#collback_modal #request-form').parent().find('.request-success').remove();
+            $('#collback_modal #request-form').parent().find('.request-error').remove();
+            if (json['success']) {
+                // $('#collback_modal #request-form').before('<div class="request-success" style=\"color: green; line-height: 30px; font-size: 17px; \">' + json['success'] + '</div>');
+                $('.success_modal').click();
+            }
+            if (json['error']) {
+                $('#collback_modal #request-form').before('<div class="request-error" style=\"color: red; line-height: 30px; font-size: 17px; \">' + json['error'] + '</div>');
+                console.log('test2');
+            }
+            $(button).text('Отправить');
+        }
+    });
+});
+
+    $('#search').find('button').on('click', function() {
+        var url = $('base').attr('href') + 'index.php?route=product/search';
+
+        var value = $('#search input[name=\'search\']').val();
+
+        if (value) {
+            url += '&search=' + encodeURIComponent(value);
+        }
+
+        location = url;
+    });
+
+    $('#search input[name=\'search\']').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('header #search input[name=\'search\']').parent().find('button').trigger('click');
+        }
+    });

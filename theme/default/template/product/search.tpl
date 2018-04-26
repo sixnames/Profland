@@ -31,17 +31,20 @@
     </div>
   </div>
   <div class="inner">
-    <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
-      <div class="row">
-        <div class="col-sm-4">
-          <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>" id="input-search" class="form-control" />
+    <div class="catalogue-search">
+      <div class="catalogue-search-row">
+        <div class="catalogue-search-column">
+          <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
+          <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>"
+                 id="input-search" class="form-control text-input"/>
         </div>
-        <div class="col-sm-3">
-          <select name="category_id" class="form-control">
+        <div class="catalogue-search-column">
+          <select name="category_id" class="form-control select">
             <option value="0"><?php echo $text_category; ?></option>
             <?php foreach ($categories as $category_1) { ?>
             <?php if ($category_1['category_id'] == $category_id) { ?>
-            <option value="<?php echo $category_1['category_id']; ?>" selected="selected"><?php echo $category_1['name']; ?></option>
+            <option value="<?php echo $category_1['category_id']; ?>"
+                    selected="selected"><?php echo $category_1['name']; ?></option>
             <?php } else { ?>
             <option value="<?php echo $category_1['category_id']; ?>"><?php echo $category_1['name']; ?></option>
             <?php } ?>
@@ -49,7 +52,8 @@
             <?php if ($category_2['category_id'] == $category_id) { ?>
             <option value="<?php echo $category_2['category_id']; ?>" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $category_2['name']; ?></option>
             <?php } else { ?>
-            <option value="<?php echo $category_2['category_id']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $category_2['name']; ?></option>
+            <option value="<?php echo $category_2['category_id']; ?>">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $category_2['name']; ?></option>
             <?php } ?>
             <?php foreach ($category_2['children'] as $category_3) { ?>
             <?php if ($category_3['category_id'] == $category_id) { ?>
@@ -62,26 +66,30 @@
             <?php } ?>
           </select>
         </div>
-        <div class="col-sm-3">
+        <div class="catalogue-search-column">
           <label class="checkbox-inline">
             <?php if ($sub_category) { ?>
-            <input type="checkbox" name="sub_category" value="1" checked="checked" />
+            <input type="checkbox" name="sub_category" value="1" checked="checked"/>
             <?php } else { ?>
-            <input type="checkbox" name="sub_category" value="1" />
+            <input type="checkbox" name="sub_category" value="1"/>
             <?php } ?>
-            <?php echo $text_sub_category; ?></label>
+            <span class="label-text"><?php echo $text_sub_category; ?></span>
+          </label>
+        </div>
+        <div class="catalogue-search-column">
+          <label class="checkbox-inline">
+            <?php if ($description) { ?>
+            <input type="checkbox" name="description" value="1" id="description" checked="checked"/>
+            <?php } else { ?>
+            <input type="checkbox" name="description" value="1" id="description"/>
+            <?php } ?>
+            <span class="label-text"><?php echo $entry_description; ?></span>
+          </label>
         </div>
       </div>
-      <p>
-        <label class="checkbox-inline">
-          <?php if ($description) { ?>
-          <input type="checkbox" name="description" value="1" id="description" checked="checked" />
-          <?php } else { ?>
-          <input type="checkbox" name="description" value="1" id="description" />
-          <?php } ?>
-          <?php echo $entry_description; ?></label>
-      </p>
-      <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
+
+      <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary green-butn"/>
+    </div>
   </div>
   <div class="inner inner--with-list products-list">
     <?php foreach ($products as $product) { ?>

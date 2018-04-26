@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-<script type="text/javascript">
+<script>
     $('#search').find('button').on('click', function() {
         var url = $('base').attr('href') + 'index.php?route=product/search';
 

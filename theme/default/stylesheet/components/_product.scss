@@ -59,9 +59,17 @@
     }
     
     &-features {
-        margin: 0 0 32px 0;
+        margin: 0 0 12px 0;
         font-size: 18px;
         line-height: 24px;
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $grayLight;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
     }
     
     &-text {

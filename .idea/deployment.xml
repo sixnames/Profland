@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="Profland" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="Profland">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/admin" />
+            <excludedPath path="/cgi-bin" />
+            <excludedPath path="/pdf" />
+            <excludedPath path="/system" />
+            <excludedPath path="/config.php" />
+            <excludedPath path="/index.php" />
+            <excludedPath path="/info.php" />
+            <excludedPath path="/org.php" />
+            <excludedPath path="/php11.ini" />
+            <excludedPath path="/pl.yarovoyae.ru.zip" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+            <excludedPath path="/image" />
+            <excludedPath path="/catalog/controller" />
+            <excludedPath path="/catalog/language" />
+            <excludedPath path="/catalog/model" />
+            <excludedPath local="true" path="/node_modules" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

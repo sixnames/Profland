@@ -106,6 +106,18 @@
     filter: grayscale(100%);
 }
 
+@media only screen and (min-width: 1100px) {
+.portfolio {
+        
+		&-item {
+
+		   img {
+				height:771px;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 1024px) {
     .portfolio {
         margin: 0 0 15px 0;

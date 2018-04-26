@@ -106,11 +106,14 @@
     &-nav {
         margin: 5px 0 0 0;
         clear: both;
-        
         font-size: 14px;
         line-height: 1.25em;
         font-weight: 700;
         @extend %clear;
+        
+        & > ul {
+            @extend %clear;
+        }
         
         & > ul > li {
             position: relative;
@@ -201,6 +204,7 @@
         
         &-list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             padding: 29px 30px;
             margin: 15px 0 0 0;
@@ -208,7 +212,7 @@
             box-shadow: $shadow;
             
             ul {
-                flex: 1 1 auto;
+                flex: 1 1 25%;
                 padding: 0 20px 0 0;
                 
                 li {
@@ -219,7 +223,7 @@
                         margin: 0 0 12px 0;
                         
                         a {
-                            height: auto;
+                            min-height: auto;
                         }
                     }
                 }
@@ -227,7 +231,7 @@
                 a {
                     display: flex;
                     align-items: center;
-                    height: 36px;
+                    min-height: 36px;
                     width: 100%;
                     color: $mainColor;
                     @extend %noDecoration;

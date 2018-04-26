@@ -47,14 +47,14 @@
 <footer class="footer" id="footer">
   <div class="footer-holder">
     <div class="inner">
-      <div class="footer-section">
+     <!--  <div class="footer-section">
         <div class="footer-left">
           <?php echo $footer_links; ?>
         </div>
         <div class="footer-right">
           <div class="footer-nav">
-            <div class="footer-nav-title">
-              <a href="">Каталог<!-- </a> -->
+           <div class="footer-nav-title">
+              <a href="">Каталог </a> 
             </div>
             <?php if($categories) { ?>
             <?php foreach($categories as $category) { ?>
@@ -70,43 +70,9 @@
             <?php } ?>
           </div>
         </div>
-      </div>
-      <div class="footer-section">
-        <div class="footer-left" style="width: 80%;">
+      </div>-->
           <?php echo $footer_contacts; ?>
-        </div>
-        <div class="footer-right" style="width: 20%;">
-          <button class="green-butn modal-trigger" type="button" data-target="callback_modal">Обратный звонок</button>
-        </div>
-      </div>
-      <div class="footer-section">
-        <div class="footer-left" style="width: 70%;">
           <?php echo $footer_copyright; ?>
-        </div>
-        <div class="footer-right" style="width: 30%;">
-          <div class="footer-social">
-            <a href="https://www.youtube.com/channel/UChSi1BGkiiuVfJMhWYa_9hA" target="_blank" rel="nofollow">
-              <svg class="icon-youtube-play">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube-play"></use>
-              </svg>
-            </a>
-            <a href="https://www.facebook.com/profland.kz" target="_blank" rel="nofollow">
-              <svg class="icon-facebook">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
-              </svg>
-            </a>
-            <a href="https://vk.com/proflandkz" target="_blank" rel="nofollow">
-              <svg class="icon-vk">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/zavod.profland/" target="_blank" rel="nofollow">
-              <svg class="icon-instagram">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
       </div>
       <a href="#main" class="anchor ui-butn">
         <svg class="icon-uniF190">
@@ -124,7 +90,8 @@
 <!--end of ui-icons-->
 
 <!--call-button-->
-<a class="call-button" href="tel:8499999999" rel="nofollow">
+
+<a class="call-button" href="tel:<?php echo $telephone; ?>" rel="nofollow">
   <svg class="icon-phone">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"/>
   </svg>

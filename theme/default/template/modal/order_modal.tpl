@@ -31,7 +31,8 @@
             </div>
         </div>
     </div>
-<script type="text/javascript">
+	
+<script>
 var url = document.location.href;
 $('#collback_modal #request-form input[name=\"page_url\"]').val(url);
 $('#collback_modal #request-form button').on('click', function() {

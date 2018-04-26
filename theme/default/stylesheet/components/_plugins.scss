@@ -2597,4 +2597,144 @@ li.fancybox-thumbs-loading {
         bottom: -16px;
     }
 }
+
+
+.selectboxit-container {
+    position: relative;
+    display: block;
+    vertical-align: top;
+}
+
+.selectboxit-container * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+.selectboxit-container span {
+    display: block;
+}
+
+.selectboxit-container .selectboxit {
+    cursor: pointer;
+    height: 34px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border: 1px solid $placeHolder;
+}
+
+.selectboxit-container .selectboxit:focus {
+    outline: 0;
+}
+
+.selectboxit-text {
+    padding: 0 38px 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selectboxit-arrow-container {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    border-top: 7px solid $black;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.selectboxit-open .selectboxit-arrow-container {
+    margin-top: -5px;
+    transform: rotate(180deg);
+}
+
+.selectboxit-options {
+    position: absolute;
+    z-index: 9999999999999;
+    display: none;
+    //width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: 1px solid $placeHolder;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: none;
+    cursor: pointer;
+    background: $white;
+}
+
+.selectboxit-option-anchor {
+    display: block;
+    padding: 5px 13px;
+    font-size: 15px;
+    color: $black;
+}
+
+.selectboxit-option-anchor:hover {
+    text-decoration: none;
+    //color: $red;
+    background: $gray;
+}
+
+.selectboxit-focus .selectboxit-option-anchor {
+    background: $gray;
+}
+
+.selectboxit-selected .selectboxit-option-anchor {
+
+}
+
+.selectboxit.selectboxit-disabled,
+.selectboxit-options .selectboxit-disabled {
+    opacity: 0.65;
+    box-shadow: none;
+    cursor: default;
+}
+
+.selectboxit-option-first {
+
+}
+
+.selectboxit-option-last {
+
+}
+
+.selectboxit-option-icon-container {
+
+}
+
+.selectboxit-option,
+.selectboxit-optgroup-header {
+
+}
+
+.selectboxit-optgroup-header {
+    font-weight: bold;
+}
+
+.selectboxit-optgroup-header:hover {
+    cursor: default;
+}
+
+.selectboxit-option-icon-container {
+    float: left;
+}
+
+.selectboxit-option-icon {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
 //___________end ofPLUGINS___________________

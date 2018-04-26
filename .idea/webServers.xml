@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e3399622-299f-4d20-a1eb-c0a1cbccceb7" name="Profland" url="http://185.98.7.166">
+        <fileTransfer host="185.98.7.166" port="21" rootFolder="/catalog/view">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

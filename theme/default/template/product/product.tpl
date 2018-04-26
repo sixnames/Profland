@@ -28,7 +28,7 @@
 
 <div class="product-content" id="product">
 <!-- for microdata -->
-<h1 style="display: none;"><?php echo $heading_title; ?></h1>
+<!--<h1 style="display: none;"><?php echo $heading_title; ?></h1>-->
 <?php if ($price) { ?>
 
 <?php } ?>
@@ -62,15 +62,18 @@
         <a href="/pdf/Profland-catalog.pdf" target="_blanc"><button class="green-butn" type="button">Скачать каталог</button></a>
         <button class="green-butn modal-trigger" type="button" data-target="order_modal">Сделать заказ</button>
       </div>
-	  
-	  
-	  
+
       <ul class="product-features">
-        <li>Код: <?php echo $sku; ?></li>
         <li><?php echo $heading_title; ?></li>
+		<li><span>Код:</span> <span><?php echo $sku; ?></span></li>
+        
+
 		<?php foreach ($attribute_groups as $attribute_group) { ?>
             <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-        <li><?php echo $attribute['name']; ?>: <?php echo $attribute['text']; ?></li>
+              <li>
+                <span><?php echo $attribute['name']; ?>:</span>
+                <span><?php echo $attribute['text']; ?><?php echo $attribute['unit']; ?></span>
+              </li>
             <?php } ?>
         <?php } ?>
         <!-- <li>Материал: Сталь оцинкованное покрытие по ГОСТу 15150-69.</li>

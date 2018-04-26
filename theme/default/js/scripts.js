@@ -183,7 +183,7 @@ $(function () {
 
     var modalHolder = $("#modal-holder");
     $(document).on("click", ".modal-trigger", function (e) {
-        var target = "modals/" + $(this).attr("data-target") + ".html";
+        var target="index.php?route=common/modal/"+$(this).attr("data-target");
         modalHolder.empty();
         pageBody.addClass("modal-open").css("padding-right", scrollBarW);
         modalHolder.load(target, function () {
@@ -199,6 +199,26 @@ $(function () {
     // matchHeight
     $('.category-item-content').matchHeight();
     // end of matchHeight
+    
+    var mainSelect = $(".select");
+    mainSelect.selectBoxIt({
+        autoWidth: false,
+        hideCurrent: true,
+        showFirstOption: true,
+        showEffect: "slideDown",
+        showEffectSpeed: "fast"
+    });
+    mainSelect.bind({
+        "open": function () {
+    
+        },
+        "close": function () {
+    
+        },
+        "change": function () {
+    
+        }
+    });
 
     // scroll effects
     $(window).on("load scroll", function () {
@@ -531,4 +551,3 @@ $(window).load(function () {
         }
     });
 });
-

@@ -119,7 +119,7 @@ label.error {
     height: 20px;
     width: 20px;
     border: 1px solid $black;
-    margin: 0 0 10px 0;
+    margin: 0 10px 0 0;
     overflow: hidden;
     cursor: pointer;
     border-radius: 50%;
@@ -161,7 +161,7 @@ label.error {
     height: 20px;
     width: 20px;
     border: 1px solid $black;
-    margin: 0 0 10px 0;
+    margin: 0 10px 0 0;
     overflow: hidden;
     cursor: pointer;
     
@@ -194,6 +194,11 @@ label.error {
     &.checked:before {
         opacity: 1;
     }
+}
+
+.label-text {
+    position: relative;
+    top: 1px;
 }
 
 @media only screen and (max-width: 768px) {

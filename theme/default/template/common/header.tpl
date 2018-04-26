@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="yandex-verification" content="0b75984f558b9192" />
+<meta name="google-site-verification" content="yAREfq8w8fkK-l3lA9YEQr7vmQXZxWtyeJGUgmckNdI" />
 <!— Facebook Pixel Code —>
 <script>
 !function(f,b,e,v,n,t,s)
@@ -47,11 +48,6 @@ src="https://www.facebook.com/tr?id=827548663930350&ev=PageView
 <link rel="shortcut icon" href="catalog/view/theme/default/images/touch/favicon.ico">
 <meta name="msapplication-config" content="catalog/view/theme/default/images/touch/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
-  <!--<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>-->
-<!-- <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
-<!-- <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -105,7 +101,7 @@ src="https://www.facebook.com/tr?id=827548663930350&ev=PageView
           <?php echo $top_block; ?>
           <div class="header-phone">
             <a href="tel:<?php echo $telephone; ?>" class="call-to"><?php echo $telephone; ?></a><br/>
-			<a href="tel:+77212981000" class="call-to">+7 7212 981000</a>
+			<a href="tel:+77212981000" class="call-to">+7 7212 98 10 00</a>
           </div>
           <div class="header-buttons">
             <button class="mobile-nav-butn ui-butn">
